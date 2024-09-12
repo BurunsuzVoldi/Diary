@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body::-webkit-scrollbar {
+    width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+    background: #e0e0e0; /* İzleyici bölgesinin rengi */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #c0c0c0; /* Kaydırma çubuğunun rengi */
+    border-radius: 20px; /* Kaydırma çubuğunun yuvarlaklığı */
+    border: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    background-color: #ffffff; /* Beyaz arka plan */
+    color: #333333; /* Koyu gri metin rengi */
+    overflow-x: hidden; /* Yatay kaydırmayı engelleme */
+}
+
+h1, h2, p {
+    margin: 0;
+}
+
+img {
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+a:hover {
+    color: #0d6efd; /* Link hover rengi */
+    text-shadow: 0 0 10px rgba(13, 110, 253, 0.7);
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 2%;
+    margin-bottom: 30px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.main-list {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.main__title {
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 70px;
+    animation: slideInUp 1s ease-out;
+}
+
+.cards-list {
+    display: flex;
+    padding: 0 5%;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+    column-gap: 50px;
+    justify-content: center;
+}
+
+.card {
+    width: 350px;
+    height: 500px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: #f9f9f9; /* Beyaz arka plan */
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 20px rgba(13, 110, 253, 0.6);
+}
+
+.card__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: inherit;
+    height: inherit;
+}
+
+.card__text {
+    border-top: 1px solid #0d6efd; /* Link rengi */
+    width: inherit;
+    display: flex;
+    padding: 50px 0 20px;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.card__title, .card__subtitle {
+    padding: 0 20px;
+    text-align: center;
+}
+
+.card__img {
+    padding: 30px;
+}
+
+.creat__link {
+    display: block;
+    width: inherit;
+    height: inherit;
+    background: url(../img/plus.svg) no-repeat;
+    background-size: 200px 200px;
+    background-position: center;
+}
+
+.card--creat:hover,
+.card:hover {
+    box-shadow: 0px 8px 20px rgba(13, 110, 253, 0.6);
+}
+
+.creat-form {
+    padding: 0 5%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.form__card {
+    width: 40%;
+    padding: 0 20px 20px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    background: #f9f9f9; /* Beyaz arka plan */
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form__inputs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.form__inputs label {
+    width: 80%;
+}
+
+.form__input, .form__text {
+    background: #ffffff; /* Beyaz arka plan */
+    border-radius: 10px;
+    padding: 10px;
+    height: 30px;
+    color: #333333; /* Koyu gri metin rengi */
+    font: inherit;
+    border: 1px solid #cccccc; /* Giriş alanları kenar rengi */
+    width: 94%;
+    transition: background 0.3s ease, border 0.3s ease;
+}
+
+.form__input:focus, .form__text:focus {
+    background: #e0e0e0; /* Odaklanma arka plan rengi */
+    border: 1px solid #0d6efd; /* Odaklanma kenar rengi */
+}
+
+.form__button {
+    border: 1px solid #0d6efd; /* Kenar rengi */
+    background: #ffffff; /* Beyaz arka plan */
+    border-radius: 10px;
+    color: #0d6efd; /* Metin rengi */
+    padding: 10px;
+    font: inherit;
+    width: 200px;
+    height: 50px;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.form__button:hover {
+    color: #ffffff;
+    background: #0d6efd; /* Buton hover rengi */
+}
+
+.main {
+    padding: 0 5%;
+}
+
+.main__block {
+    background: #f9f9f9; /* Beyaz arka plan */
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.main__subtitle {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.main__text {
+    line-height: 30px;
+    margin-bottom: 40px;
+    white-space: pre-wrap;
+    align-self: flex-start;
+}
+
+.main__link {
+    display: block;
+    border: 1px solid #0d6efd; /* Kenar rengi */
+    background: #ffffff; /* Beyaz arka plan */
+    border-radius: 10px;
+    color: #0d6efd; /* Metin rengi */
+    padding: 15px 10px;
+    font: inherit;
+    width: 200px;
+    text-align: center;
+    cursor: pointer;
+    transition: color 0.3s ease, background 0.3s ease;
+}
+
+.main__link:hover {
+    color: #ffffff;
+    background: #0d6efd; /* Link hover rengi */
+}
+
+.main-login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    width: 30%;
+    padding: 50px 30px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff; /* Beyaz arka plan */
+    border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.login label {
+    width: 60%;
+}
+
+.reg__link {
+    height: fit-content;
+    text-align: center;
+    padding: 15px 0;
+}
+
+.error {
+    font-size: 12px;
+    color: #FF6F6F;
+    animation: shake 0.5s ease;
+}
+
+.login__link:hover {
+    color: #0d6efd; /* Link hover rengi */
+}
+
+/* Animasyonlar */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(0); }
+    75% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
